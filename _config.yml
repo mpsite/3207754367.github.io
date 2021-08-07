@@ -10,7 +10,10 @@ description: 个人博客 #网站描述
 keywords: blog,android,win10,linux,hexo
 #关键字
 author: ma  #网站作者
-language: zh-CN		#语言
+#语言
+language:
+    - zh-CN
+    - en
 timezone: 'Asia/Shanghai'	#时区
 sitemap:
   path: sitemap.xml
@@ -102,7 +105,8 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-theme: materialized
+#theme: materialized
+theme: stellar
 
 
 # Algolia Search API Key
