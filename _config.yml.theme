@@ -44,8 +44,9 @@ sidebar:
       layout: markdown
       title: 
       content:
-        - '欢迎光临小站'
-
+        #- <p id="hitokoto"><a href="#" id="hitokoto_text">获取中...</a></p><script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+        - <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+        - <script>document.write('恋爱就像是把自己不好的一面反射出来的镜子，特别单恋的时候，会嫉妒、产生偏见性格、变怪癖、羡慕别人、真的接触各种各样的感情。但这也不必为此感到羞耻，这都说明你对恋爱如此认真。');</script>
 
 
 ######## Article ########
@@ -99,7 +100,7 @@ comments:
     js: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js
     appId: 4OMX09Gk5FsmN5xXglvG56fE-gzGzoHsz
     appKey: XlQjVcB5nLgyWs6djmTLAFS4
-    placeholder:
+    placeholder: 你也是一个路过的假面骑士嘛？
     requiredFields: [nick, mail]
     enableQQ: true # Unstable avatar link
     recordIP: true # Record commenter IP
