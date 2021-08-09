@@ -143,7 +143,7 @@
   }
   function load_comment(){
     if(!document.getElementById("valine_container"))return;
-    stellar.loadScript('https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@main/js/Valine.min.js', {defer:true}).then(function () {
+    stellar.loadScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', {defer:true}).then(function () {
       const el = document.getElementById("valine_container");
       var path = el.getAttribute('comment_id');
       const placeholder = "";
@@ -151,7 +151,7 @@
         path = decodeURI(window.location.pathname);
       }
       var valine = new Valine();
-      valine.init(Object.assign({"js":"https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@main/js/Valine.min.js","appId":"4OMX09Gk5FsmN5xXglvG56fE-gzGzoHsz","appKey":"XlQjVcB5nLgyWs6djmTLAFS4","placeholder":null,"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true,"visitor":true,"tagMeta":["博主","访客"],"metaPlaceholder":{"nick":"昵称/QQ号(必填)","mail":"邮箱（必填，完全保密）","link":""},"master":["14e5c4d0f332e78fa3f9714b3e07519b"],"friends":["14e5c4d0f332e78fa3f9714b3e07519b"]}, {
+      valine.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js","appId":"4OMX09Gk5FsmN5xXglvG56fE-gzGzoHsz","appKey":"XlQjVcB5nLgyWs6djmTLAFS4","placeholder":null,"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true,"visitor":true,"tagMeta":["博主","访客"],"metaPlaceholder":{"nick":"昵称/QQ号(必填)","mail":"邮箱（必填，完全保密）","link":null},"master":["14e5c4d0f332e78fa3f9714b3e07519b"],"friends":["14e5c4d0f332e78fa3f9714b3e07519b"]}, {
         el: '#valine_container',
         path: path,
         placeholder: placeholder,
