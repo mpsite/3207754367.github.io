@@ -119,48 +119,27 @@
   }
   if ('true' == 'true') {
     stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
-  }</script><script src="/js/main.js" async></script><script>function getEmojiMaps() {
-    function emoji(path, idx, ext) {
-      return path + "/" + path + "-" + idx + "." + ext;
+  }</script><script src="/js/main.js" async></script><script>function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://cdn.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js","envId":"jump-web-2gdkz0tm6a22e445"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
     }
-    var emojiMaps = {};
-    for (var i = 1; i <= 54; i++) {
-      emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
-    }
-    for (var i = 1; i <= 101; i++) {
-      emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
-    }
-    for (var i = 1; i <= 116; i++) {
-      emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
-    }
-    for (var i = 1; i <= 125; i++) {
-      emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
-    }
-    for (var i = 1; i <= 4; i++) {
-      emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
-    }
-    return emojiMaps;
-  }
-  function load_comment(){
-    if(!document.getElementById("valine_container"))return;
-    stellar.loadScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', {defer:true}).then(function () {
-      const el = document.getElementById("valine_container");
-      var path = el.getAttribute('comment_id');
-      const placeholder = "你也是一个路过的假面骑士嘛？";
-      if (!path) {
-        path = decodeURI(window.location.pathname);
-      }
-      var valine = new Valine();
-      valine.init(Object.assign({"js":"https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js","appId":"4OMX09Gk5FsmN5xXglvG56fE-gzGzoHsz","appKey":"XlQjVcB5nLgyWs6djmTLAFS4","placeholder":"你也是一个路过的假面骑士嘛？","requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true,"visitor":true,"tagMeta":["博主","访客"],"metaPlaceholder":{"nick":"昵称/QQ号(必填)","mail":"邮箱（必填，完全保密）","link":null},"master":["14e5c4d0f332e78fa3f9714b3e07519b"],"friends":["14e5c4d0f332e78fa3f9714b3e07519b"]}, {
-        el: '#valine_container',
-        path: path,
-        placeholder: placeholder,
-        emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
-        emojiMaps: getEmojiMaps(),
-      }));
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-    load_comment();
-  });</script></div><script>window.imageLazyLoadSetting={isSPA:!1,preloadRatio:1,processImages:null}</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})})</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var e=r[a],t=e,n=function(){r=r.filter(function(t){return e!==t})},i=new Image,o=t.getAttribute("data-original");i.onload=function(){t.src=o,n()},t.src!==o&&(i.src=o)}()}o(),n.addEventListener("scroll",function(){var t=o,e=n;clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this)</script></body></html>
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });</script></div><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
