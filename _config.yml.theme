@@ -45,7 +45,6 @@ sidebar:
       title: 
       content:
         #- <p id="hitokoto"><a href="#" id="hitokoto_text">获取中...</a></p><script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-        - <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
         - <script>document.write('恋爱就像是把自己不好的一面反射出来的镜子，特别单恋的时候，会嫉妒、产生偏见性格、变怪癖、羡慕别人、真的接触各种各样的感情。但这也不必为此感到羞耻，这都说明你对恋爱如此认真。');</script>
 
 
@@ -134,7 +133,7 @@ footer:
        url: /atom.xml
      - title: GitHub
        icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/08a41b181ce68.svg"/>'
-     #  url: https://github.com/3207754367
+       url: 
     # - title: Music
     #   icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/cf1ae151f9e83.svg"/>'
     #   url: /
@@ -156,8 +155,8 @@ footer:
        - '[<a href="http://wpa.qq.com/msgrd?v=3&uin=2064079738">QQ</a> ]()'
       # - '[Unsplash](/)'
      '更多':
-      # - '[关于本站](/about/)'
-       - '[GitHub](https://github.com/3207754367)'
+       - '[关于本站](/about/)'
+       - '[<a href="https://github.com/3207754367">GitHub</a>]()'
       # - '[GitLab](/)'
   license: '[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)'
   source: #'[GitHub](https://github.com/xaoxuu/hexo-theme-stellar)'

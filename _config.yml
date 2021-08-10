@@ -191,3 +191,13 @@ lazyload:
 #  textHeight: 25
 #  outlineColor: '#E2E1D1'
 #  maxSpeed: 0.1 
+#
+#
+
+#gitalk:
+#  enable: true ## 设置true为开启gitalk
+#  owner: 3207754367 ## github的登录名
+#  repo:  hexo-comments ## 注意：此处设置为在github中创建的评论项目的名称，而非完全访问地址
+#  client_id: b1759db48dc3ccb9c063 ## 见图4
+#  client_secret: a8f9949e062a6fc4fce324154f96715afaaca878 ## 见图4
+#  admin: 3207754367
